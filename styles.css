@@ -1,0 +1,83 @@
+:root {
+  --sunset-1: rgb(241, 92, 27);
+  --sunset-2: rgb(238, 176, 153);
+  --dark-sky: #1b1e17;
+}
+
+body {
+  background-image: url(https://res.cloudinary.com/dgkccb1sn/image/upload/v1717027459/bradley-dunn-WMDvr2Av6cA-unsplash_mzk5be.jpg);
+  background-size: cover;
+  font-family: "Raleway", sans-serif;
+}
+
+input, button {
+  font-family: "Raleway", sans-serif;
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+h1 {
+  background-color: color-mix(in srgb, var(--sunset-1) 90%, transparent);
+  color: var(--dark-sky);
+  width: 80%;
+  margin: auto;
+  border-radius: 20px;
+}
+
+h2 {
+  background-color: color-mix(in srgb, var(--sunset-2) 70%, transparent);
+  width: 70%;
+  margin: 20px auto;
+  border-radius: 10px;
+}
+
+.input-container {
+  width: 80%;
+  padding: 20px;
+  margin: 40px auto;
+  align-items: center;
+  background: rgba(255, 255, 255, 30%);
+  border-radius: 5px;
+}
+
+.inputs {
+  display: flex;
+  justify-content: space-around;
+}
+
+.input-container p {
+  text-align: center;
+  margin-bottom: 0;
+  font-size: 0.8rem;
+}
+
+.result-container {
+  width: 60%;
+  margin: 40px auto;
+  background: color-mix(in srgb, var(--dark-sky) 70%, transparent);
+  border-radius: 5px;
+  color: white;
+}
+
+.hide {
+  display: none;
+}
+
+#result-statement {
+  text-align: center;
+}
+
+.definition-container {
+  padding: 0 20px;
+  width: 80%;
+  margin: 100px auto 0;
+  background: rgba(255, 255, 255, 30%);
+  border-radius: 5px;
+}
+
+#check-btn {
+  width: 30%;
+  height: 5%;
+}
