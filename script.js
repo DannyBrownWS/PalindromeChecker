@@ -1,4 +1,3 @@
-const palindromeChecker = document.getElementById("palindrome-checker");
 const textInput = "% TexT";//document.getElementById("text-input");
 const checkButton = document.getElementById("check-btn");
 const resultContainer = document.getElementById("result-container");
