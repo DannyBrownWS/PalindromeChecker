@@ -1,4 +1,5 @@
-const textInput = "% TexT";//document.getElementById("text-input");
+//why is underscore not being ignored?
+const textInput = document.getElementById("text-input");
 const checkButton = document.getElementById("check-btn");
 const resultContainer = document.getElementById("result-container");
 const resultStatement = document.getElementById("result-statement");
@@ -7,24 +8,22 @@ let isError = false;
 const scrubTextInput = () => {
   const regex = /[\W+\s+]/g;
 
-  const cleanedTextInput = textInput.replace(regex, '').toLowerCase();
+  const cleanedTextInput = textInput.value.replace(regex, '').toLowerCase();
 
   return cleanedTextInput;
 };
 
 const isPalindrome = () => {
-  scrubTextInput();
-  
   const cleanedText = scrubTextInput();
   const splitText = cleanedText.split("");
   
-  resultStatement.innerText = `${textInput} is a palindrome`;
+  resultStatement.innerHTML = `${textInput.value} <span class="success">is</span> a palindrome`;
   
   for (let character = 0; character < splitText.length; character++) {
     
     if (splitText[character] !== splitText[splitText.length - 1 - character]) {
       
-      resultStatement.innerText = `${textInput} is not a palindrome`
+      resultStatement.innerHTML = `${textInput.value} <span class="failure">is not</span> a palindrome`
       break;
     }
   };
