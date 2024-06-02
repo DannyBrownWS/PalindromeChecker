@@ -6,7 +6,7 @@ const resultStatement = document.getElementById("result-statement");
 let isError = false;
 
 const scrubTextInput = () => {
-  const regex = /[\W+\s+]/g;
+  const regex = /[\W+\s+_+]/g;
 
   const cleanedTextInput = textInput.value.replace(regex, '').toLowerCase();
 
