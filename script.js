@@ -1,5 +1,5 @@
 const palindromeChecker = document.getElementById("palindrome-checker");
-const textInput = document.getElementById("text-input");
+const textInput = "% TexT";//document.getElementById("text-input");
 const checkButton = document.getElementById("check-btn");
 const resultContainer = document.getElementById("result-container");
 const resultStatement = document.getElementById("result-statement");
@@ -14,6 +14,8 @@ const scrubTextInput = () => {
 };
 
 const isPalindrome = () => {
+  scrubTextInput();
+  
   const cleanedText = scrubTextInput();
   const splitText = cleanedText.split("");
   
@@ -31,4 +33,4 @@ const isPalindrome = () => {
   return resultStatement.innerText;
 };
 
-checkButton.addEventListener("submit", isPalindrome);
+checkButton.addEventListener("click", isPalindrome);
