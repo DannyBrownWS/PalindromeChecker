@@ -1,9 +1,7 @@
-//why is underscore not being ignored?
 const textInput = document.getElementById("text-input");
 const checkButton = document.getElementById("check-btn");
 const resultContainer = document.getElementById("result-container");
 const resultStatement = document.getElementById("result-statement");
-let isError = false;
 
 const scrubTextInput = () => {
   const regex = /[\W+\s+_+]/g;
@@ -14,6 +12,12 @@ const scrubTextInput = () => {
 };
 
 const isPalindrome = () => {
+  
+  if (textInput.value === "") {
+    alert("Please input a value");
+    return;
+  };
+  
   const cleanedText = scrubTextInput();
   const splitText = cleanedText.split("");
   
@@ -28,7 +32,13 @@ const isPalindrome = () => {
     }
   };
   resultContainer.classList.remove("hide");
-  return resultStatement.innerText;
+  return resultStatement.innerHTML;
 };
 
 checkButton.addEventListener("click", isPalindrome);
+
+textInput.addEventListener("keydown", (event) => {
+  if (event.key === "Enter") {
+    isPalindrome();
+  }
+});
