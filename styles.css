@@ -4,10 +4,17 @@
   --dark-sky: #1b1e17;
 }
 
+html, body {
+  min-width: 700px;
+  min-height: 570px;
+}
+
 body {
   background-image: url(https://res.cloudinary.com/dgkccb1sn/image/upload/v1717027459/bradley-dunn-WMDvr2Av6cA-unsplash_mzk5be.jpg);
   background-size: cover;
+  background-repeat: no-repeat;
   font-family: "Raleway", sans-serif;
+  height: 100vh;
 }
 
 input, button {
@@ -20,21 +27,24 @@ h1, h2 {
 
 h1 {
   background-color: color-mix(in srgb, var(--sunset-1) 90%, transparent);
-  color: var(--dark-sky);
-  width: 80%;
+  width: 70%;
   margin: auto;
   border-radius: 20px;
+  font-weight: 500;
+  font-size: 1.6rem;
 }
 
 h2 {
   background-color: color-mix(in srgb, var(--sunset-2) 70%, transparent);
-  width: 70%;
+  width: 45%;
   margin: 20px auto;
   border-radius: 10px;
+  font-weight: 400;
+  font-size: 1.2rem;
 }
 
 .input-container {
-  width: 80%;
+  width: 60%;
   padding: 20px;
   margin: 40px auto;
   align-items: center;
@@ -47,18 +57,29 @@ h2 {
   justify-content: space-around;
 }
 
+#check-btn {
+  width: 30%;
+  height: 5%;
+}
+
 .input-container p {
   text-align: center;
   margin-bottom: 0;
   font-size: 0.8rem;
+  font-style: italic;
 }
 
 .result-container {
-  width: 60%;
-  margin: 40px auto;
+  width: 55%;
+  height: 30px;
+  margin: 0 auto;
   background: color-mix(in srgb, var(--dark-sky) 70%, transparent);
   border-radius: 5px;
   color: white;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  display: flex;
 }
 
 .hide {
@@ -66,7 +87,7 @@ h2 {
 }
 
 #result-statement {
-  text-align: center;
+  margin: auto;
 }
 
 .success {
@@ -78,14 +99,63 @@ h2 {
 }
 
 .definition-container {
-  padding: 0 20px;
+  padding: 10px 20px;
   width: 80%;
-  margin: 100px auto 0;
   background: rgba(255, 255, 255, 30%);
   border-radius: 5px;
+  position: relative;
+  bottom: -120px;
+  margin: 0 auto;
 }
 
-#check-btn {
-  width: 30%;
-  height: 5%;
+.definition-container h4{
+  margin: 0 0 5px 0;
+  font-size: 1.1rem;
+  color: var(--sunset-1);
+}
+
+a:link {
+  color: var(--sunset-2);
+  text-decoration: none;
+}
+
+a:visited {
+  color: var(--sunset-2);
+  text-decoration: none;
+}
+
+a:hover, a:active {
+  color: var(--sunset-1);
+  text-decoration: none;
+}
+
+.noun {
+  font-size: 0.8rem;
+  color: black;
+}
+
+.definition-container h5{
+  margin: 0 0 10px 0;
+  font-size: 0.9rem;
+}
+
+.definition-container p{
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.artist {
+  background: rgba(255, 255, 255, 30%);
+  width: 25%;
+  position: relative;
+  bottom: -190px;
+  left: 20px;
+  border-radius: 5px;
+  padding: 2px;
+}
+
+.artist p {
+  margin: auto;
+  font-size: 0.8rem;
+  text-align: center;
 }
