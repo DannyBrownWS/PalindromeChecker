@@ -2,6 +2,7 @@
   --sunset-1: rgb(241, 92, 27);
   --sunset-2: rgb(238, 176, 153);
   --dark-sky: #1b1e17;
+  --medium-sky: #84a298;
 }
 
 html, body {
@@ -80,6 +81,7 @@ h2 {
   left: 50%;
   transform: translate(-50%);
   display: flex;
+  align-items: center;
 }
 
 .hide {
@@ -96,6 +98,27 @@ h2 {
 
 .failure {
   color: red;
+}
+
+.clear-button {
+  padding: 0;
+  margin-right: 5px;
+  width: 20px;
+  height: 20px;
+  background: transparent;
+  border: none;
+  display: inline-flex; /* Ensure it fits tightly around the SVG */
+  align-items: center; /* Center the SVG */
+  justify-content: center;
+}
+
+.clear-button svg {
+  display: block;
+}
+
+.clear-button:hover circle,
+.clear-button:focus circle {
+  cursor: pointer;
 }
 
 .definition-container {
