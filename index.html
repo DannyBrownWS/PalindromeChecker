@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ena">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,17 +7,39 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/db7cd6898a.js" crossorigin="anonymous"></script>
     <title>Palindrome Checker by Danny Brown</title>
   </head>
   <body>
     <main>
+      <div class="resting-star" id="resting-div">
+        <i id="resting-star" class="fa-solid fa-star fa-3x"></i>
+        <div class="resting-left-eye"></div>
+        <div class="resting-right-eye"></div>
+        <p class="resting-mouth">)</p>
+      </div>
+      
+      <div class="playing-star hide" id="playing-div">
+        <i id="playing-star" class="fa-solid fa-star fa-3x"></i>
+        <div class="playing-left-eye">^</div>
+        <div class="playing-right-eye">^</div>
+        <p class="playing-mouth">)</p>
+      </div>
+      
+      <div class="paused-star hide" id="paused-div">
+        <i id="paused-star" class="fa-solid fa-star fa-3x"></i>
+        <div class="resting-left-eye"></div>
+        <div class="resting-right-eye"></div>
+        <p class="paused-mouth">)</p>
+      </div>
+      
       <h1>Palindrome Checker</h1>
       <h2>Created by Danny Brown</h2>
 
       <div class="input-container">
         <div class="inputs">
           <input type="text" class="text-input" id="text-input" placeholder="Will it palindrome?" />
-          <button id="check-btn">Check</button>
+          <button id="check-button">Check</button>
         </div>
         <p class="caveat">Note: Punctuation, symbols, and spaces will be ignored.</p>
       </div>
@@ -39,6 +61,11 @@
 
       <div class="artist">
         <p>Photo credit: <a class="artist-link" href="https://unsplash.com/@bradleycdunn" >Bradley Dunn</a></p>
+      </div>
+      
+      <div class="song">
+        <p>Song: Joseph Haydn, Symphony No. 47<p>
+        <p>Movement III, Minuet and Trio - <a href="https://www.classicfm.com/composers/haydn/palindrome/"><i>The Palindrome</i></a></p>
       </div>
 
     </main>
