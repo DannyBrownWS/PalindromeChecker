@@ -18,6 +18,160 @@ body {
   height: 100vh;
 }
 
+.hide {
+  display: none;
+}
+
+.resting-star {
+  width: 20px;
+  position: fixed;
+  height: 20px;
+  animation: 2s ease-in-out 1s 2 grow;
+}
+
+#resting-star {
+  color: silver;
+  transition: color 0.25s;
+}
+
+.resting-star:hover #resting-star {
+  color: gold;
+}
+
+.resting-star:hover {
+  cursor: pointer;
+}
+
+.resting-left-eye {
+  height: 2px;
+  width: 2px;
+  border: 1px solid black;
+  background-color: black;
+  border-radius: 2px;
+  position: relative;
+  left: 107%;
+  bottom: 140%;
+}
+
+.resting-right-eye {
+  height: 2px;
+  width: 2px;
+  border: 1px solid black;
+  background-color: black;
+  border-radius: 2px;
+  position: relative;
+  left: 147%;
+  bottom: 159%;
+}
+
+.resting-mouth {
+  transform: rotate(90deg);
+  position: relative;
+  left: 89%;
+  bottom: 205%;
+  font-size: 0.9em;
+}
+
+.playing-star {
+  width: 20px;
+  position: fixed;
+  height: 20px;
+}
+
+#playing-star {
+  color: red;
+  animation: 15s ease-in-out 0s infinite rainbow;
+}
+
+.playing-left-eye {
+  position: relative;
+  font-weight: bold;
+  font-size: 0.8em;
+  left: 90%;
+  bottom: 160%;
+}
+
+.playing-right-eye {
+  position: relative;
+  font-weight: bold;
+  font-size: 0.8em;
+  left: 150%;
+  bottom: 235%;
+}
+
+.playing-mouth {
+  transform: rotate(90deg);
+  position: relative;
+  left: 91%;
+  bottom: 305%;
+  font-size: 0.9em;
+}
+
+.playing-star:hover {
+  cursor: pointer;
+}
+
+.paused-star {
+  width: 20px;
+  position: fixed;
+  height: 20px;
+}
+
+#paused-star {
+  color: dodgerblue;
+}
+
+.paused-mouth {
+  transform: rotate(-90deg);
+  position: relative;
+  left: 83%;
+  bottom: 285%;
+  font-size: 0.9em;
+}
+
+.paused-star:hover {
+  cursor: pointer;
+}
+
+@keyframes grow {
+  15% {
+    transform: scale(1.8);
+  }
+  30% {
+    transform: scale(1);
+  }
+  45% {
+    transform: scale(1.4);
+  }
+  60% {
+    transform: scale(1);
+  }
+}
+
+@keyframes rainbow {
+  0% {
+    color: red;
+  }
+  13% {
+    color: magenta;
+  }
+  34% {
+    color: blue;
+  }
+  46% {
+    color: cyan;
+  }
+  71% {
+    color: lime;
+  }
+  79% {
+    color: yellow;
+  }
+  100% {
+    color: red;
+  }  
+}
+
 input, button {
   font-family: "Raleway", sans-serif;
 }
@@ -58,7 +212,7 @@ h2 {
   justify-content: space-around;
 }
 
-#check-btn {
+#check-button {
   width: 30%;
   height: 5%;
 }
@@ -103,8 +257,8 @@ h2 {
 .clear-button {
   padding: 0;
   margin-right: 5px;
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
   background: transparent;
   border: none;
   display: inline-flex; /* Ensure it fits tightly around the SVG */
@@ -181,4 +335,24 @@ a:hover, a:active {
   margin: auto;
   font-size: 0.8rem;
   text-align: center;
+}
+
+.song {
+  background: rgba(255, 255, 255, 30%);
+  width: 45%;
+  position: relative;
+  bottom: -165px;
+  left: 350px;
+  border-radius: 5px;
+  padding: 2px;
+}
+
+.song p {
+  margin: auto;
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+.song p:first-of-type {
+  padding-bottom: 2px;
 }
