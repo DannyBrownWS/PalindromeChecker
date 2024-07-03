@@ -341,8 +341,8 @@ a:hover, a:active {
   background: rgba(255, 255, 255, 30%);
   width: 45%;
   position: relative;
-  bottom: -165px;
-  left: 350px;
+  bottom: -200px;
+  left: 20px;
   border-radius: 5px;
   padding: 2px;
 }
